@@ -20,5 +20,5 @@ export default function Cell({ score }: Props) {
   const textStyle = score === 0 ? cols[0] : score === 100 ? cols[cols.length - 1] : cols[Math.floor(score / 10)+1];
   const styles = `border-1 border-collapse border-gray-700 text-center text-sm p-2 ${textStyle}`;
 
-  return <td className={styles}>{score}</td>;
+  return <td className={styles}>{score.toFixed(2)}</td>;
 }
