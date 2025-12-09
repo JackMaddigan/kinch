@@ -7,7 +7,7 @@ const rows = data as KinchEntry[];
 
 export default function Table () {
   return (
-    <section>
+    <section className='overflow-scroll h-screen'>
       {/* X-scrollable header row with sticky y */}
       <div className='sticky top-0 bg-gray-800 text-white grid grid-cols-20 text-center min-w-300 z-50 py-2 text-sm'>
         <h3>Rank</h3>
