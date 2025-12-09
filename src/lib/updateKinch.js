@@ -42,9 +42,8 @@ async function updateKinch(){
     if(data[i-1].overall === data[i].overall) { data[i].rank = data[i-1].rank; }
   }
 
+  fs.writeFileSync("./public/data/kinch.json", JSON.stringify(data, null, 2));
   fs.writeFileSync("./src/lib/kinch.json", JSON.stringify(data, null, 2));
-
-
 }
 
 function getKinchFor(eventId, wr, nr){
