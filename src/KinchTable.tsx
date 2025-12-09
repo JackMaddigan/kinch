@@ -38,7 +38,7 @@ export default function KinchTable () {
                       className="w-8 h-auto shadow-lg"
                     />
                   </div>
-                  <div className='flex-1'>{row.overall}</div>
+                  <div className='flex-1'>{row.overall.toFixed(2)}</div>
                 </div>
               </td>
               {Object.entries(row.scores).map(([, score], i) => (
