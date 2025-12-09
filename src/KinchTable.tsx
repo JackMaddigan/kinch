@@ -14,9 +14,9 @@ export default function KinchTable () {
           <tr className="sticky top-0 left-0">
             <th className={`${border} sticky left-0 z-50 bg-gray-800`}>
               <div className="flex flex-row gap-4 text-xs">
-                <div>Rank</div>
-                <div>Region</div>
-                <div>Score</div>
+                <div className='flex-1'>Rank</div>
+                <div className='flex-0.5'>Region</div>
+                <div className='flex-1'>Score</div>
               </div>
             </th>
             {eventOrder.map((eventId, i) => (
@@ -32,7 +32,7 @@ export default function KinchTable () {
               <td className={`sticky left-0 bg-gray-800 border-1 border-gray-800 text-white text-center`}>
                 <div className="flex flex-row">
                   <div className='flex-1'>{row.rank}</div>
-                  <div className='flex-1'>
+                  <div className='flex-0.5'>
                     <Flag
                       code={row.iso2.toUpperCase()}
                       className="w-8 h-auto shadow-lg"
