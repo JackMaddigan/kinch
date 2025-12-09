@@ -18,7 +18,7 @@ export default function Cell({ score }: Props) {
     'bg-green-700',
   ];
   const textStyle = score === 0 ? cols[0] : score === 100 ? cols[cols.length - 1] : cols[Math.floor(score / 10)+1];
-  const styles = `border-1 border-collapse border-gray-700 text-center text-sm p-2 ${textStyle}`;
+  const styles = `border-1 border-collapse border-gray-700 text-center text-sm p-2 text-black ${textStyle}`;
 
-  return <td className={styles}>{score.toFixed(2)}</td>;
+  return <div className={styles}>{score.toFixed(2)}</div>;
 }
